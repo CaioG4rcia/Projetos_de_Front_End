@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;    
+}
+body{
+    background: rgb(109,202,208);
+    background: linear-gradient(0deg, rgba(109,202,208,1) 19%, rgba(133,217,206,1) 58%);
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    width: 100%;
+}
+.text{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 70px;
+    transform: translateY(70px);
+    font-weight: 500;
+}
+.main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 1000px;
+    gap: 8rem;
+
+}
+.card{
+    display: flex;
+    width: 370px;
+    height: 530px;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    transition: all 0.8s;
+    user-select: none;
+}
+.front{
+    display: flex;
+    width: 370px;
+    height: 530px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-grow: 0;
+   /* From https://css.glass */
+background: rgba(255, 255, 255, 0.989);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(0px);
+-webkit-backdrop-filter: blur(0px);
+border: 1px solid rgba(255, 255, 255, 0.3);    border-radius: 5px;
+    box-shadow: 0px 0px 4px rgb(138, 138, 138);
+
+
+    && .circle{
+        background-image: url(../img/jovem-adulto-bonito-com-uma-aparencia-seria-e-concentrada-fazendo-um-brainstorming-e-pensando-sobre-um-problema-desafiador_1194-299503.avif);
+        width: 170px;
+        height: 170px;
+        border-radius: 1000%;
+        background-position: center;
+        background-size: cover;
+    }
+   
+}
+.back{
+    display: flex;
+    width: 370px;
+    height: 530px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-grow: 0;
+    background: radial-gradient(circle, rgba(254,255,255,1) 19%, rgb(255, 255, 255) 58%);    border-radius: 5px;
+    box-shadow: 0px 0px 4px rgb(138, 138, 138);
+    position: absolute;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    padding: 10px;
+}
+.circle::before{
+    content: "";
+    position: absolute;
+    background: linear-gradient(0deg, rgba(109,202,208,1) 19%, rgba(133,217,206,1) 58%);
+    width: 164px;
+    height: 164px;
+    padding: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 9.4%;
+    border-radius: 100%;
+    z-index: -1;
+}
+
+.content-text{
+    text-align: center;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transform: translateY(-3.7px);
+    && h1{
+        font-size: 23px;
+        user-select: none;
+        pointer-events: none;
+    }
+    
+}
+p{
+    user-select: none;
+    pointer-events: none;
+}
+.buttons{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    height: 30px;
+    align-items: center;
+}
+.buttons i{
+    color: white;
+    background: linear-gradient(0deg, rgba(109,202,208,1) 19%, rgba(133,217,206,1) 58%);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    font-size: 20px;
+    user-select: none;
+    pointer-events: none;
+}
+.card:hover{
+    transform: rotateY(180deg);
+}
+.retang{
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/jovem-adulto-bonito-com-uma-aparencia-seria-e-concentrada-fazendo-um-brainstorming-e-pensando-sobre-um-problema-desafiador_1194-299503.avif);
+    background-size: cover;
+    background-position: center;
+    border-radius: 4px;
+    box-shadow: 0px 0px 4px rgb(148, 148, 148);
+}
+span{
+    animation: up 1.4s linear infinite ;
+    margin: 10px;
+    color: white;
+    text-shadow: 0px 0px 4px rgb(1, 71, 57);
+}
+span:nth-child(1){
+    animation-delay: 0s;
+}
+span:nth-child(2){
+    animation-delay: 0.2s;
+}
+span:nth-child(3){
+    animation-delay: 0.4s;
+}
+span:nth-child(4){
+    animation-delay: 0.6s;
+}
+span:nth-child(5){
+    animation-delay: 0.8s;
+}
+@keyframes up {
+    50%{
+        transform: translateY(-20px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+@media (max-width: 1500px){
+    .container{
+        width: 100%;
+        border: none;
+    }
+    .content-text p{
+        font-size: 14px;
+    }
+    .content-text{
+        width: 84%;
+    }
+    .circle::before{
+        top: 6.8%;
+    }
+    .circle{
+        width: 100px;
+        height: 100px;
+    }
+    .front{
+        width: 320px;
+        height: 450px;
+    }
+    .back{
+        width: 320px;
+        height: 450px;
+    }
+    .text{
+        transform: translateY(20px);
+    }
+}
+@media (max-width: 1200px){
+    .front, .back{
+        scale: 0.8;
+    }
+    .text{
+        font-size: 41px;
+    }
+}

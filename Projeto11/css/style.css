@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;    
+    color: white;
+
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/pexels-ahmetyuksek-31030846.jpg);
+    background-size: cover;
+    background-position: center;
+}
+main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form{
+    width: 460px;
+    height: 570px;
+    border: 1px solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 6px;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.131);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(0px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+h1{
+    transform: translateY(14px);
+}
+.inputs{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    gap: 20px;
+}
+.email, .password{
+    position: relative;
+
+}
+.email input, .password input{
+    width: 100%;
+    background: none;
+    height: 50px;
+    border: none;
+    border-bottom: 2px solid ;
+    outline: none;
+    font-size: 16px;
+    padding-top: 20px;
+    transition: all 0.3s ;
+}
+.email label, .password label{
+    position: absolute;
+    z-index: -1;
+    transform: translateY(10px);
+    left: 0;
+    transition: all 0.3s ;
+
+}
+.check-forgot{
+    display: flex;
+    width: 77%;
+    justify-content: space-between;
+    align-items: center;
+
+    && label{
+        font-size: 16px;
+    }
+}
+
+button{
+    width: 77.7%;
+    height: 50px;
+    border: 1px solid white;
+    background: none;
+    border-radius: 4px;
+    font-size: 17px;
+    color: black;
+    cursor: pointer;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+button:hover{
+    transform: translateY(-10px);
+}
+a{
+    letter-spacing: 0px;
+    text-decoration: none;
+    font-size: 16px;
+}
+.password input:valid ~ label,
+.password input:focus ~ label{
+    transform: translateY(4px);
+    font-size: 12px;
+}
+.email input:valid ~ label,
+.email input:focus ~ label{
+    transform: translateY(4px);
+    font-size: 12px;
+}
+input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 8px;
+    cursor: pointer;
+    outline: none;
+    background-color: transparent;
+    display: inline-block;
+    transition: 0.3s;
+    transform: translateY(1.8px);
+}
+
+/* Quando estiver marcado */
+input[type="checkbox"]:checked {
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(255, 255, 255);
+}
